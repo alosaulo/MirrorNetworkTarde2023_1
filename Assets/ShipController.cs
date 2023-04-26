@@ -1,15 +1,25 @@
 using Mirror;
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Security;
+using Telepathy;
+using UnityEditor;
 using UnityEngine;
 
 public class ShipController : NetworkBehaviour
 {
+    public GameObject prefabTiro;
+    public Transform origemTiro;
     public float speed;
     Rigidbody rb;
 
     float vAxis;
     float hAxis;
+
+    [SyncVar]
+    public float tiroCooldown;
+    [SyncVar]
+    float contadorTiro;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +34,18 @@ public class ShipController : NetworkBehaviour
         { 
             vAxis = Input.GetAxis("Vertical");
             hAxis = Input.GetAxis("Horizontal");
+            if (contadorTiro >= tiroCooldown)
+            {
+                if (Input.GetButtonDown("Jump")) 
+                {
+                    CmdAtirar();
+                    contadorTiro = 0;
+                }
+            }
+            else 
+            {
+                contadorTiro += Time.deltaTime;
+            }
         }
     }
 
@@ -39,6 +61,12 @@ public class ShipController : NetworkBehaviour
 
             rb.position = new Vector3(newHPosition, transform.position.y, newVPosition);
         }
+    }
+
+    [Command]
+    void CmdAtirar() {
+        GameObject tiro = Instantiate(prefabTiro, origemTiro.position, origemTiro.rotation);
+        NetworkServer.Spawn(tiro);
     }
 
 }

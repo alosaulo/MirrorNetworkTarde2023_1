@@ -182,7 +182,8 @@ MonoBehaviour:
   playerPrefab: {fileID: 9044281970621892500, guid: b32a7227bbf4d3e45a66b7a1554b1bfe, type: 3}
   autoCreatePlayer: 1
   playerSpawnMethod: 1
-  spawnPrefabs: []
+  spawnPrefabs:
+  - {fileID: 8696356819660947834, guid: 428ecdb9de1034c489cfdb0c2689c073, type: 3}
   snapshotSettings:
     bufferTimeMultiplier: 2
     catchupNegativeThreshold: -1
@@ -605,3 +606,64 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1e4e033f190813478af1f420d8da4e0, type: 3}
+--- !u!1001 &8696356820117671573
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8696356819660947813, guid: 428ecdb9de1034c489cfdb0c2689c073, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8696356819660947813, guid: 428ecdb9de1034c489cfdb0c2689c073, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8696356819660947813, guid: 428ecdb9de1034c489cfdb0c2689c073, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8696356819660947813, guid: 428ecdb9de1034c489cfdb0c2689c073, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8696356819660947813, guid: 428ecdb9de1034c489cfdb0c2689c073, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8696356819660947813, guid: 428ecdb9de1034c489cfdb0c2689c073, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8696356819660947813, guid: 428ecdb9de1034c489cfdb0c2689c073, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8696356819660947813, guid: 428ecdb9de1034c489cfdb0c2689c073, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8696356819660947813, guid: 428ecdb9de1034c489cfdb0c2689c073, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8696356819660947813, guid: 428ecdb9de1034c489cfdb0c2689c073, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8696356819660947813, guid: 428ecdb9de1034c489cfdb0c2689c073, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8696356819660947814, guid: 428ecdb9de1034c489cfdb0c2689c073, type: 3}
+      propertyPath: sceneId
+      value: 2175442324
+      objectReference: {fileID: 0}
+    - target: {fileID: 8696356819660947834, guid: 428ecdb9de1034c489cfdb0c2689c073, type: 3}
+      propertyPath: m_Name
+      value: Tiro
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 428ecdb9de1034c489cfdb0c2689c073, type: 3}
