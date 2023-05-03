@@ -103,14 +103,19 @@ namespace ShipGame
         public void LevarDano(int dano) {
             vida -= dano;
             if (vida <= 0) {
-                RpcRespawn();
+                CmdRespawn();
+                vida = 5;
             }
+        }
+
+        [Command]
+        void CmdRespawn() { 
+            RpcRespawn();
         }
 
         [ClientRpc]
         void RpcRespawn() {
             transform.position = startPos;
-            vida = 5;
         }
 
     }
